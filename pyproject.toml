@@ -1,0 +1,28 @@
+[project]
+name = "temp07-discord-bot"
+version = "0.1.0"
+description = "Temp0.7 weekly meeting reminders"
+requires-python = ">=3.11"
+dependencies = [
+    "discord.py>=2.5,<3",
+    "openai>=2,<3",
+    "pydantic>=2.10,<3",
+    "python-dotenv>=1.0,<2",
+    "tzdata>=2025.1",
+]
+
+[tool.poetry]
+package-mode = false
+requires-poetry = ">=2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8,<10"
+ruff = ">=0.11,<1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
